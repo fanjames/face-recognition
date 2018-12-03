@@ -10,7 +10,7 @@ from utils import draw_bounding_box_on_image
 
 fanhua_image = face_recognition.load_image_file("images/fanhua.jpg")
 fanhua_face_encoding = face_recognition.face_encodings(fanhua_image)[0]
-
+fa
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     fanhua_face_encoding
