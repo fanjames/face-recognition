@@ -26,7 +26,7 @@ def detect_faces(frame):
     resize_scale = 2.0
     frame = cv2.resize(frame, (0, 0), fx=1/resize_scale, fy=1/resize_scale)
 
-    face_locations = face_recognition.face_locations(frame)
+    face_locations = face_recognition.face_locations(frame, model='cnn')
     face_encodings = face_recognition.face_encodings(frame, face_locations)
 
     face_names = []
