@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import numpy as np
 import PIL.Image as Image
 import PIL.ImageColor as ImageColor
