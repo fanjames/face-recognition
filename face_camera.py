@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 import face_recognition
 import cv2
 import numpy as np
@@ -14,7 +16,7 @@ known_face_encodings = [
     fanhua_face_encoding
 ]
 known_face_names = [
-    "樊华"
+    u"樊华"
 ]
 
 def detect_faces(frame):
