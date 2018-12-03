@@ -32,7 +32,7 @@ def detect_faces(frame):
     face_names = []
     for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
         # See if the face is a match for the known face(s)
-        matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+        matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance=0.55)
 
         name = "Unknown"
 
@@ -49,7 +49,7 @@ def detect_faces(frame):
         bottom *= resize_scale
         left *= resize_scale
 
-        draw_bounding_box_on_image(image, top, left, bottom, right, font="simkai", 
+        draw_bounding_box_on_image(image, top, left, bottom, right, font="SimKai", 
                 display_str_list=[name], use_normalized_coordinates=False)
 
     image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2BGR)
