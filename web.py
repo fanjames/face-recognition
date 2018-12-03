@@ -16,7 +16,9 @@ def gen(camera):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(gen(Camera()),
+    camera = Camera()
+    camera.set_video_source('rtmp://live.chosun.gscdn.com/live/tvchosun1.stream')
+    return Response(gen(camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
