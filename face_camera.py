@@ -50,7 +50,7 @@ def detect_faces(frame):
         left *= resize_scale
 
         draw_bounding_box_on_image(image, top, left, bottom, right, font="simkai", 
-                display_str_list=[name.encode('utf-8')], use_normalized_coordinates=False)
+                display_str_list=[name], use_normalized_coordinates=False)
 
     image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2BGR)
     return image
