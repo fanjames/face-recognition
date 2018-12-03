@@ -33,7 +33,7 @@ def draw_bounding_box_on_image(image, ymin, xmin, ymax, xmax, color='red', font=
     display_str_heights = [font.getsize(ds)[1] for ds in display_str_list]
     # Each display_str has a top and bottom margin of 0.05x.
     total_display_str_height = (1 + 2 * 0.05) * sum(display_str_heights)
-''
+
     if top > total_display_str_height:
         text_bottom = top
     else:
