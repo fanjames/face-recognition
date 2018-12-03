@@ -21,7 +21,7 @@ def draw_bounding_box_on_image(image, ymin, xmin, ymax, xmax, color='red', font=
 
     if font is not None:
         try:
-            font = ImageFont.truetype(f'{font}.ttf', int(im_width/30))
+            font = ImageFont.truetype('%s.ttf' % font, int(im_width/30))
         except IOError:
             font = ImageFont.load_default()
 
